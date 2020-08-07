@@ -21,7 +21,6 @@ class MLNXOS < Oxidized::Model
 
   cmd :secret do |cfg|
     cfg.gsub! /(snmp-server community).*/, '   <snmp-server community configuration removed>'
-    cfg.gsub! /username (\S+) password (\d+) (\S+).*/, '<secret hidden>'
     cfg
   end
 
